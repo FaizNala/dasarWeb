@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>format text CSS</title>
-        <link rel="stylesheet" type = "text/css" href="styleText.css">
-
+        <title>Position CSS</title>
+        <link rel="stylesheet" type="text/css" href="stylePosition.css">
     </head>
 
     <body>
-        <p class= "tulisan_warna">Mengatur format text dengan CSS</p>
-        <p class="par1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, tenetur quaerat autem quos facilis corporis qui suscipit, 
-            laborum asperiores natus minus. Culpa ratione molestiae dolore earum vitae doloremque molestias aliquid, voluptatibus 
-            cumque recusandae! Quos libero asperiores, cupiditate magni molestias enim voluptas velit dolorem esse vitae eos inventore 
-            possimus corrupti molestiae aut accusamus aperiam laboriosam fuga delectus adipisci sit! Optio odit sapiente dolor et eius 
-            amet id odio nam facilis ducimus pariatur non enim ea maxime inventore ex, dignissimos recusandae tenetur nobis, at consectetur? 
-            Nisi nostrum et, error ullam mollitia porro, exercitationem voluptatum architecto molestiae facilis asperiores cupiditate, 
-            similique tenetur. Dolore?
-            
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum qui est dolorem ullam velit modi amet voluptate iusto, 
-            eum atque cupiditate reiciendis vel debitis error. Consectetur maiores, est perferendis quibusdam laudantium laborum eius 
-            ducimus deserunt aut dolores quos, accusamus eum officiis. Error, reprehenderit! Facere, at eius minima doloremque adipisci, 
-            sunt hic ipsam ullam alias maiores sed maxime porro eos non cum quibusdam saepe nulla, delectus iste. Suscipit quas veniam 
-            tempora voluptatem facere a. Facilis perspiciatis hic natus ducimus praesentium neque vitae labore nulla voluptas consequuntur, 
-            illo, sequi corrupti voluptatum. Eum fuga doloremque dolor nobis, voluptates totam quod omnis laudantium doloribus!
+        <h2>position: static</h2>
+        
+        <p>Position static digunakan untuk mangatur elemnt menjadi statis secara default. 
+            Elemen akan mengikuti posisi normal secara default,
+            elemen tidak dipengaruhi oleh properti seperti top, bottom, left dan right
         </p>
+
+        <div class="static">
+            Elemen ini diatur menggunakan posisi : static;
+        </div>
+        <br><br><br><br>
+        <h2>posistion: relative;</h2>
+
+        <p>Sebuahn element HTML yang mengunakan position relative akan terletak pada posisi normal.
+            Mengatur properti atas, kanan, bawah, dan kiri dari elem yang dipsosisikan dengan "relatif"
+            akan membuatnya jauh dari posisi normalnya.
+            Konten lain tidak akan disesuiakan agar sesuai dengan celah yang ditinggalkan ooleh elemen tersebut
+        </p>
+
+        <div class = "relative">
+            Elemen ini diatur mengunakan posisi : relative;
+        </div>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+
+        <h2>position absolute</h2>
+
+        <p>Element HTML yang menggunakan position absolute akan diposisikan relatif denganelement lain yang mendahuluinya yang terdekat,
+            bukan relatif terhadap layar secara normal
+        </p>
+
+        <div class="relative1">Elemen ini diatur menggunakan posisi: relative;
+            <div class="absolute">Elemen ini diatur menggunakan posisi: absolute</div>
+        </div>
+
+        <br><br><br>
+        <br><br><br>
+
+        <h2>position: sticky</h2>
+        <p>Cobalah untuk <b>scroll</b> untuk mengetahui bagaimana posisi sticky bekerja</p>
+        <p>Catatan: IE/Edge 15 dan versi yang lebih lama tidak mendukung sticky</p>
+
+        <div class="sticky">Hola Aku adalah sticky</div>
+
+        <div style="padding-bottom: 2000px;">
+            <p>Dalam contoh ini, elemn sticky menempel pada posisi paling atas halaman (top:0),
+                ketika mencapai posisi scrollnya</p>
+            <p>Cobalah untuk melakukan scroll</p>
+            <p>Cobalah untuk melakukan scroll. Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Quis quia nesciunt, nulla eaque ea dicta consequuntur, debitis incidunt cumque nisi cum, 
+                sapiente blanditiis repellendus voluptatibus ratione non voluptatum deserunt repudiandae?</p>
+            <p>Cobalah untuk melakukan scroll., Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eligendi soluta, ipsum illo assumenda vero repellat quia enim praesentium facilis explicabo, 
+                asperiores inventore exercitationem ipsam aut! Autem dolor recusandae pariatur et.</p>
+        </div>
+
     </body>
 </html>
