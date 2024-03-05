@@ -75,9 +75,9 @@ $rataRata = $totalNilai / count($daftarNilai2);
 
 echo "Rata-Rata nilai : $rataRata<br>";
 
-for ($i = 0; $i < 5; $i++) {
-    if ($daftarNilai2[$i][1] > $rataRata) {
-        echo "Nama : {$daftarNilai2[$i][0]}, nilai : {$daftarNilai2[$i][1]} <br>";
+foreach ($daftarNilai2 as $nilai) {
+    if ($nilai[1] > $rataRata) {
+        echo "Nama : {$nilai[0]}, nilai : {$nilai[1]} <br>";
     }
 }
 
