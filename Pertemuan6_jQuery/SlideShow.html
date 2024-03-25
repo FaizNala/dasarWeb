@@ -12,9 +12,11 @@
             });
             function showNextImage() {
                 i++;
-                if(i > 3) i = 1; 
                 $('#sliderImage' + i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100); 
                 $('#title' + i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100); 
+                if(i > 3){
+                    i= 0;
+                } 
             }
         </script>
     </head>
