@@ -6,12 +6,12 @@ if (isset($_FILES["file"])) {
     $file_tmp = $_FILES["file"]["tmp_name"];
     $file_type = $_FILES["file"]["type"];
     @$file_ext = strtolower("" . end(explode(".", $_FILES["file"]["name"])) . "");
-    // $extension = array("pdf", "doc", "docx", "txt");
-    $extension = array("jpg", "jpeg", "png");
+    $extension = array("pdf", "doc", "docx", "txt");
+    // $extension = array("jpg", "jpeg", "png");
 
     if(in_array($file_ext, $extension) == false) {
-        // $errors[] = "Ekstensi file yang diizinkan adaf PDF, DOC, DOCX, atau TXT.";
-        $errors[] = "Ekstensi file yang diizinkan adaf JPG, JPEG, PNG.";
+        $errors[] = "Ekstensi file yang diizinkan adaf PDF, DOC, DOCX, atau TXT.";
+        // $errors[] = "Ekstensi file yang diizinkan adaf JPG, JPEG, PNG.";
     }
 
     if ($file_size > 2097152) {
@@ -19,10 +19,11 @@ if (isset($_FILES["file"])) {
     }
 
     if(empty($errors) == true) {
-        // move_uploaded_file($file_tmp, "documents/" .$file_name);
-        // echo "FIle berhasil diunggah";
-        move_uploaded_file($file_tmp, "images/" .$file_name);
-        echo "Gambar berhasil diunggah";
+        move_uploaded_file($file_tmp, "documents/" .$file_name);
+        // move_uploaded_file($file_tmp, "images/" .$file_name);
+        echo "FIle berhasil diunggah";
+        // move_uploaded_file($file_tmp, "images/" .$file_name);
+        // echo "Gambar berhasil diunggah";
     } else {
         echo implode(" ", $errors);
     }
