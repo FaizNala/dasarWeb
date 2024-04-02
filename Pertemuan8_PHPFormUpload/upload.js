@@ -7,7 +7,7 @@ $(document) .ready(function() {
         }
     })
     
-    $("#upload.form") .submit(function(e) {
+    $("#upload-form") .submit(function(e) {
         e.preventDefault();
 
         var formData = new FormData(this);
