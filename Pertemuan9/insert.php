@@ -9,7 +9,6 @@ if (mysqli_connect_errno()) {
 }
 
 // Data yang akan dimasukkan
-$id = 1;
 $username = "admin";
 $password = "123";
 
@@ -17,7 +16,7 @@ $password = "123";
 $password_hashed = md5($password);
 
 // Query untuk memasukkan data ke dalam tabel user
-$query = "INSERT INTO user (id, username, password) VALUES ('$id','$username', '$password_hashed')";
+$query = "INSERT INTO user (username, password) VALUES ('$username', '$password_hashed')";
 
 // Eksekusi query
 if (mysqli_query($koneksi, $query)) {
