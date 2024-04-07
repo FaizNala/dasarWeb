@@ -8,7 +8,7 @@
 
     <body>
         <!-- <form id="upload-form" action="upload_ajax.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" id="file">
+            <input type="file" name="files[]" multiple="multiple">
             <input type="submit" name="submit" value="Unggah">
         </form>
 
@@ -18,7 +18,7 @@
             <h2>Unggah File Dokumen</h2>
             <form id="upload-form" action="upload_ajax.php" method="post" enctype="multipart/form-data">
                 <div class="file-input-container">
-                    <input type="file" name="file" id="file" class="file-input">
+                    <input type="file" name="files[]" id="file" class="file-input">
                     <label for="file" class="file-label">Pilih File</label>
                 </div>
                 <button type="submit" name="submit" class="upload-button" id="upload-button">Unggah</button>
