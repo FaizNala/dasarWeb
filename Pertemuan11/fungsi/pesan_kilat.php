@@ -7,7 +7,7 @@
         return false;
     }
 
-    function get_flashdara($key = "") {
+    function get_flashdata($key = "") {
         if (empty($key) && isset($_SESSION['_flashdata'][$key])) {
             (!$data = $_SESSION['_flashdata'][$key]);
             unset($_SESSION['_flashdata'][$key]);
