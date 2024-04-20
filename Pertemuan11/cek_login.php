@@ -3,7 +3,7 @@
         session_start();
     
     include "config/koneksi.php";
-    include "fungsi/pesan_kilat";
+    include "fungsi/pesan_kilat.php";
     include "fungsi/anti_injection.php";
 
     $username = antiinjection($koneksi, $_POST['username']);
@@ -19,7 +19,7 @@
     if ($salt !== null && $hashed_password !== null) {
         $combined_password = $salt . $password;
 
-        if (password_verify($combined_password, $hashed_password)) {
+        if ($password == $hashed_password) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['level'] = $row['level'];
             header("Location: index.php");
