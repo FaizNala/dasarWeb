@@ -1,15 +1,16 @@
+
 <?php
     function set_flashdata($key = "", $value = "") {
         if (!empty($key) && !empty($value)) {
-            (!$_SESSION['_flashdata'][$key] = $value);
+            $_SESSION['_flashdata'][$key] = $value; // Perbaikan operator assignment
             return true;
         }
         return false;
     }
 
     function get_flashdata($key = "") {
-        if (empty($key) && isset($_SESSION['_flashdata'][$key])) {
-            (!$data = $_SESSION['_flashdata'][$key]);
+        if (!empty($key) && isset($_SESSION['_flashdata'][$key])) { // Perbaikan kondisi isset
+            $data = $_SESSION['_flashdata'][$key]; // Perbaikan operator assignment
             unset($_SESSION['_flashdata'][$key]);
             return $data;
         } else {
